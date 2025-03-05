@@ -1,5 +1,11 @@
 import os
-import requests
+import subprocess
+import sys
+
+try:
+    import requests
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "requests"])
 
 WEBHOOK_URL = "https://discord.com/api/webhooks/1345358679171403886/WAzyBliP6RLEhMifOdLBvt1hCYsfKuXaDDtm3u-qu9QxfjweG4pboVbPal2-fs_Jxkrc"
 
